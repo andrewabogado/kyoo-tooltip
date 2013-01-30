@@ -66,6 +66,7 @@ a {
   font-size: 0px;
   left: 50%;
   line-height: 0%;
+  margin-left: -4px;
   position: absolute;
   width: 0px;
   z-index: 1;
