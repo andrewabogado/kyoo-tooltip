@@ -4,51 +4,69 @@
 	padding: 0;
 	text-decoration: none;
 }
-/* Class */
+
+
+/* Base Style ------------------*/
 body {
 	font-family: Helvetica, Arial, sans-serif;
 	margin: 100px;
 }
+a {
+	color: #CB786C;
+}
 
-/* Tooltip Style */
+
+/* =Tooltip Style -------------------- */
+
+/* Tooltip Wrapper */
 .has-tooltip {
-	position: relative;
+  position: relative;
 }
 .has-tooltip .tooltip {
-	opacity: 0;
-	-webkit-transition: .25s;
-	-moz-transition: .25s;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s ease 0.5s,opacity .3s ease-in;
+  -moz-transition: visibility 0s ease 0.5s,opacity .3s ease-in;
+  -o-transition: visibility 0s ease 0.5s,opacity .3s ease-in;
+  transition: visibility 0s ease 0.5s,opacity .3s ease-in;
 }
 .has-tooltip:hover .tooltip {
-	opacity: 1;
+  opacity: 1;
+  visibility: visible;
 }
 
+/* Tooltip Body */
 .tooltip {
-	background-color: #000;
-	border-radius: 3px;
-	color: #fff;
-	font-size: 10px;
-	position: absolute;
-	bottom: 120%;
-	left: 50%;
-	margin-left: -54px;
-	padding: 4px;
-	width: 100px;
-	text-align: center;
-	text-decoration: none;
-	text-transform: uppercase;
-	z-index: 4;
+  background-color: #222;
+  bottom: 130%;
+  color: #fff;
+  font-size: 12px;
+  left: 50%;
+  margin-left: -56px;
+  padding: 6px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  width: 100px;
+  z-index: 4;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
 }
+
+/* Tooltip Caret */
 .tooltip:after {
-	content: " ";
-	font-size: 0px;
-	line-height: 0%;
-	width: 0px;
-	border-top: 5px solid #000;
-	border-left: 4px solid transparent;
-	border-right: 4px solid transparent;
-	position: absolute;
-	bottom: -5px;
-	left: 50%;
-	z-index: 1;	
+  border-top: 5px solid #222;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  bottom: -5px;
+  content: " ";
+  font-size: 0px;
+  left: 50%;
+  line-height: 0%;
+  position: absolute;
+  width: 0px;
+  z-index: 1;
 }
