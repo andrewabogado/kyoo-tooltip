@@ -1,4 +1,7 @@
-/* Reset */
+/* =Reset
+/* You shouldn't care about this code.
+/* I suppose you have your own reset
+/* ----------------------------------- */
 * {
 	margin: 0;
 	padding: 0;
@@ -6,68 +9,186 @@
 }
 
 
-/* Base Style ------------------*/
+/* =Base style (and this as well.) 
+/* ----------------------------------- */
 body {
 	font-family: Helvetica, Arial, sans-serif;
-	margin: 100px;
+  color: #666;
+  line-height: 20px;
+	margin: 2% auto;
+  text-align: center;
+  max-width: 500px;
 }
 a {
 	color: #CB786C;
+  display: inline-block;
+}
+p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+h1, h2 {
+  border-bottom: 1px dotted #DDD;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 30px;
+  padding-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-align: left;
+}
+img {
+  border: 1px solid #EEE;
+  padding: 1px;
+}
+.pull-l {
+  float: left;
+  margin-right: 10px;
+}
+a.has-tooltip {
+  border-bottom: 1px solid #eee;
 }
 
 
-/* =Tooltip Style -------------------- */
+/* =Tooltip style 
+/* From here on, you may pick the code
+/* ----------------------------------- */
 
-/* Tooltip Wrapper */
+/* Tooltip wrapper -------*/
+/* Add this class element you so desire to add a tooltip */
 .has-tooltip {
   position: relative;
 }
 .has-tooltip .tooltip {
   opacity: 0;
+  pointer-events: none;
   visibility: hidden;
-  -webkit-transition: visibility 0s ease 0.5s,opacity .3s ease-in;
-  -moz-transition: visibility 0s ease 0.5s,opacity .3s ease-in;
-  -o-transition: visibility 0s ease 0.5s,opacity .3s ease-in;
-  transition: visibility 0s ease 0.5s,opacity .3s ease-in;
+  z-index: 99999;
+  /* Animate the tooltip */
+  -webkit-transition: .3s ease-in-out;
+  -moz-transition: .3s ease-in-out;
+  -o-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 .has-tooltip:hover .tooltip {
   opacity: 1;
   visibility: visible;
 }
 
-/* Tooltip Body */
+/* Tooltip base style -------*/
 .tooltip {
   background-color: #222;
-  bottom: 130%;
   color: #fff;
   font-size: 12px;
-  left: 50%;
-  margin-left: -56px;
-  padding: 6px;
+  padding: 6px 10px;
   position: absolute;
   text-align: center;
   text-decoration: none;
   text-shadow: none;
-  width: 100px;
   z-index: 4;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
+  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+  -o-box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
 }
+  .tooltip:after {
+    content: " ";
+    font-size: 0px;
+    line-height: 0%;
+    position: absolute;
+    width: 0px;
+    z-index: 1;   
+  }
 
-/* Tooltip Caret */
-.tooltip:after {
-  border-top: 5px solid #222;
-  border-left: 4px solid transparent;
-  border-right: 4px solid transparent;
-  bottom: -5px;
-  content: " ";
-  font-size: 0px;
+
+/* Top position style -------*/
+.tooltip--top {
+  bottom: 130%;
   left: 50%;
-  line-height: 0%;
-  margin-left: -4px;
-  position: absolute;
-  width: 0px;
-  z-index: 1;
+  margin-bottom: -10px;
+  margin-left: -56px;
+  width: 100px;
 }
+  /* Tooltip arrow */
+  .tooltip--top:after {
+    border-top: 5px solid #222;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -4px;
+  }
+  /* When hovered */
+  .has-tooltip:hover .tooltip--top {
+    margin-bottom: 0;
+  }
+
+
+/* Right position style -------*/
+.tooltip--right {
+  left: 100%;
+  margin-left: -5px;
+  top: -5px;
+  width: 100px;
+}
+  /* Tooltip arrow */
+  .tooltip--right:after {
+    border-top: 4px solid rgba(0, 0, 0, 0);
+    border-right: 5px solid #222;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+    left: -5px;
+    top: 10px;
+  }
+  /* When hovered */
+  .has-tooltip:hover .tooltip--right {
+    margin-left: 10px;
+  }
+
+
+/* Left position style -------*/
+.tooltip--left {
+  right: 100%;
+  margin-right: -5px;
+  top: -5px;
+  width: 100px;
+}
+  /* Tooltip arrow */
+  .tooltip--left:after {
+    border-top: 4px solid rgba(0, 0, 0, 0);
+    border-left: 5px solid #222;
+    border-bottom: 4px solid rgba(0, 0, 0, 0);
+    right: -5px;
+    top: 10px;
+  }
+  /* When hovered */
+  .has-tooltip:hover .tooltip--left {
+    margin-right: 10px;
+  }
+
+
+/* Bottom position style -------*/
+.tooltip--bottom {
+  top: 130%;
+  left: 50%;
+  margin-top: -10px;
+  margin-left: -56px;
+  width: 100px;
+}
+  /* Tooltip arrow */
+  .tooltip--bottom:after {
+    border-bottom: 5px solid #222;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    top: -5px;
+    left: 50%;
+    margin-left: -4px;
+  }
+  /* When hovered */
+  .has-tooltip:hover .tooltip--bottom {
+    margin-top: 0;
+  }
+
