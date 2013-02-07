@@ -98,10 +98,10 @@ a.kyoo-tooltip {
 }
   .kyootip:after {
     content: " ";
-    font-size: 0px;
-    line-height: 0%;
+    font-size: 0;
+    line-height: 0;
     position: absolute;
-    width: 0px;
+    width: 0;
     z-index: 1;   
   }
 
