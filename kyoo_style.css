@@ -9,7 +9,7 @@
 }
 
 
-/* =Base style (and this as well.) 
+/* =Base style (and this as well.)
 /* ----------------------------------- */
 body {
   font-family: Helvetica, Arial, sans-serif;
@@ -42,7 +42,7 @@ img {
   margin: 2% auto;
   text-transform: uppercase;
   padding-top: 20px;
-}  
+}
 .pull-l {
   float: left;
   margin-right: 10px;
@@ -52,7 +52,7 @@ a.kyoo-tooltip {
 }
 
 
-/* =Kyoo Tooltip style 
+/* =Kyoo Tooltip style
 /* You may grab the code from here on
 /* ----------------------------------- */
 
@@ -91,10 +91,10 @@ a.kyoo-tooltip {
   -moz-border-radius: 3px;
   -o-border-radius: 3px;
   border-radius: 3px;
-  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
-  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
-  -o-box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2); 
+  -webkit-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  -moz-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  -o-box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
   .kyootip:after {
     content: " ";
@@ -102,7 +102,7 @@ a.kyoo-tooltip {
     line-height: 0;
     position: absolute;
     width: 0;
-    z-index: 1;   
+    z-index: 1;
   }
 
 
@@ -111,7 +111,7 @@ a.kyoo-tooltip {
   bottom: 130%;
   left: 50%;
   margin-bottom: -10px;
-  margin-left: -56px;
+  margin-left: -60px;
   width: 100px;
 }
   /* Tooltip arrow */
@@ -151,12 +151,11 @@ a.kyoo-tooltip {
   }
 
 
-/* Bottom position style -------*/
-.tooltip--bottom {
+.kyootip--bottom {
   top: 130%;
   left: 50%;
   margin-top: -10px;
-  margin-left: -56px;
+  margin-left: -60px;
   width: 100px;
 }
   /* Tooltip arrow */
@@ -168,7 +167,7 @@ a.kyoo-tooltip {
     left: 50%;
     margin-left: -5px;
   }
-  /* When hovered, move tooltip on top */
+  /* When hovered, move tooltip at the bottom */
   .kyoo-tooltip:hover .kyootip--bottom {
     margin-top: 0;
   }
